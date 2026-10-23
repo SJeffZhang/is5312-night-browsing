@@ -338,7 +338,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="tip"><b>怎么看：</b>左：把样本按「预测受深夜影响的程度」分成 5 组，看每组的实际效应。右：预测效应的分布。</div>
       <div class="take"><ul class="clean" style="margin:0"><li>平均效应 <b>−0.18</b> 个百分点，和前面固定效应模型算出来的 <b>−0.179</b> 几乎完全一致 —— 两种方法互相印证。</li>
 <li>绝对损失最大的是冷门商品、以及研究期内已经买过东西的老用户。</li>
-<li>但按相对比例看，各类人都差不多（少 17%–26%），没有「某类人深夜反而更爱买」。</li></ul></div>
+<li>但按相对比例看，各类人都差不多（少 17%–26%），没有「某类人深夜反而更爱买」。</li>
+<li>把品类加进模型重跑，15 个品类哑变量的重要性合计只有 <b>0.0001</b>，商品热度仍是第一（0.54）—— 品类不是主要影响因素。</li></ul></div>
     </div>
   </div>
 </article>
@@ -392,7 +393,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="tip"><b>怎么看：</b>把每个 episode 关联上品类，取事件量前 20 的品类、其余 9,400 个归「其他」，每组单独重跑深夜 vs 白天的生存分析。条形越靠左，说明越怕深夜。</div>
       <div class="take"><ul class="clean" style="margin:0"><li>21 组（前 20 品类 + 其他）的深夜风险比 <b>全部 < 1</b>，没有例外 —— 深夜买得少是普适的。</li>
 <li>差别不大：最怕深夜的品类 HR <b>0.58</b>、最不怕的 <b>0.81</b>，多数在 0.6–0.75。</li>
-<li>三个购买窗口都 < 1；品类不是主要调节因素，和「冷热门商品」的规模效应一致。</li></ul></div>
+<li>三个购买窗口都 < 1；因果森林里 15 个品类哑变量重要性合计仅 0.0001 —— 品类不是主要调节因素。</li></ul></div>
     </div>
   </div>
 </article></div>
